@@ -103,4 +103,4 @@ console.log(`value: ${text}, type: ${typeof text}`);
 
 // object
 const dodo = { name: 'dodo', age: 20 };
-dodo.age = 28;
+dodo.age = 28; 
