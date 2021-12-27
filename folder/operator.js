@@ -235,4 +235,28 @@ function printAll(...args) {
 	
 	args.forEach((arg) => console.log(arg));
 }
-printAll('noob', 'coder', 'dodo');
+printAll('newbie', 'coder', 'dodo');
+
+// 5. Local scope 
+// JS에서 scope란 밖에서는 안이 보이지 않고, 안에서만 밖을 볼 수 있는 것, 위 개념에서 파생됨
+let globalMessage = 'global'; // global variable
+function printMessage() {
+    let message = 'hello';
+    console.log(message); // 지역 변수
+    console.log(globalMessage);
+    function printAnother() {
+        console.log(message);
+        let childMessage = 'hello';
+    }
+    //console.log(childMessage); // 에러남
+    //return undefined; 이 들어가 있는 것과 같다.
+}
+printMessage();
+
+// 6. Return a vulue
+// 모든 함수는 return undefined 이 들어가 있거나, 값을 리턴하거나 둘중 하나.
+function sum(a, b) {
+    return a + b;
+}
+const result = sum(1, 2); // 3
+console.log(`sum: ${sum(1, 2)}`);
