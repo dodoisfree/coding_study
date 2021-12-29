@@ -20,3 +20,4 @@ const dodo = new Person('dodo', 28);
 console.log(dodo.name);
 console.log(dodo.age);
 dodo.speak();
+console.log('test');
