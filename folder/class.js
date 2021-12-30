@@ -20,4 +20,27 @@ const dodo = new Person('dodo', 28);
 console.log(dodo.name);
 console.log(dodo.age);
 dodo.speak();
-console.log('test');
+
+
+// 2. Getter and setter
+class User {
+    constructor(firstName, lastName, age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    get age() {
+        return this._age; // 콜스택 다차는 오류 방지 게터세터안 변수 이름변경
+    }
+
+    set age(value) {
+        //if (value < 0) {
+        //  throw Error('나이가 어떻게 -1이야');
+        //}
+        this._age = value < 0 ? 0 : value;
+    }
+}
+
+const user1 = new User('Steve', 'job', -1);
+console.log(user1.age);
