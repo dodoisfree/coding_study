@@ -7,12 +7,16 @@
 <body>
     <h1><a href="index.html">WEB</a></h1>
     <input type="button" value="night" onclick="
-    document.querySelector('body').style.backgroundColor ='black';
-    document.querySelector('body').style.color ='white';
-    ">
-    <input type="button" value="day" onclick="
-    document.querySelector('body').style.backgroundColor ='white';
-    document.querySelector('body').style.color ='black';
+    let target = document.querySelector('body'); // 변수 사용 
+    if (this.value === 'night'){
+        target.style.backgroundColor ='black';
+        target.style.color ='white';
+        this.value = 'day'
+    } else {
+        target.style.backgroundColor ='white';
+        target.style.color ='black';
+        this.value = 'night';
+    }
     ">
     <ol>
         <li><a href="1.html">HTML</a></li>
@@ -26,5 +30,17 @@
 자바스크립트는 본래 넷스케이프 커뮤니케이션즈 코퍼레이션의 브렌던 아이크(Brendan Eich)가 처음에는 모카(Mocha)라는 이름으로, 
 나중에는 라이브스크립트(LiveScript)라는 이름으로 개발하였으며, 최종적으로 자바스크립트가 되었다.
 </p>
+
+<input id="night_day" type="button" value="night" onclick=" // 변수 미사용, this. 미사용
+    if (document.querySelector('#night_day').value === 'night'){
+        document.querySelector('body').style.backgroundColor ='black';
+        document.querySelector('body').style.color ='white';
+        document.querySelector('#night_day').value = 'day'
+    } else {
+        document.querySelector('body').style.backgroundColor ='white';
+        document.querySelector('body').style.color ='black';
+        document.querySelector('#night_day').value = 'night';
+    }
+    ">
 </body>
 </html>
