@@ -49,8 +49,25 @@ console.log(user1.firstName);
 // 3 필드 (public, private)
 class Experiment {
     PublicFIeld = 2;
-    #privateField = 0;  //# 붙이면 private필드 내부에서만 접근가능
+    #privateField = 0;  //# 붙이면 private필드 내부에서만 접근가능, 최근에 사용되기 시작해 아직 너무이르다.
 }
 const experiment = new Experiment();
 console.log(experiment.PublicFIeld);
 console.log(experiment.privateField);
+
+// 4 Static properties and methods
+// 오브젝트에 상관없이, 클래스 자체에서 받아오는 경우 static 사용 권장
+class Article {
+    static publisher = 'Dream Coding';
+    constructor(articleNumber) {
+        this.articleNumber = articleNumber;
+    }
+    static printPublisher() {
+        console.log(Article.publisher);
+    }
+}
+
+const article1 = new Article(1);
+const article2 = new Article(2);
+console.log(Article.publisher);
+Article.printPublisher();
