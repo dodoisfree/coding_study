@@ -45,3 +45,12 @@ class User {
 const user1 = new User('Steve', 'job', -1);
 console.log(user1.age);
 console.log(user1.firstName);
+
+// 3 필드 (public, private)
+class Experiment {
+    PublicFIeld = 2;
+    #privateField = 0;  //# 붙이면 private필드 내부에서만 접근가능
+}
+const experiment = new Experiment();
+console.log(experiment.PublicFIeld);
+console.log(experiment.privateField);
