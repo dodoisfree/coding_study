@@ -71,3 +71,39 @@ const article1 = new Article(1);
 const article2 = new Article(2);
 console.log(Article.publisher);
 Article.printPublisher();
+
+// 5 Inheritance 상속
+// 클래스를 연장하는 방법
+class Shape {
+    constructor(width, height, color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
+    }
+
+    draw() {
+        console.log(`drawing ${this.color} color of`);
+    }
+
+    getArea() {
+        return this.width * this.height;
+    }
+}
+// extends를 사용하면 클래스를 연장할 수 있다. 
+class Rectangle extends Shape {}
+class Triangle extends Shape {
+    draw() {
+        super.draw();
+        console.log('🔺');
+    }
+    getArea() {
+        return (this.width * this.height) / 2;
+    }
+}
+
+const rectangle = new Rectangle(20, 20, 'blue');
+rectangle.draw();
+console.log(rectangle.getArea());
+const triangle = new Triangle(20, 20, 'red');
+triangle.draw();
+console.log(triangle.getArea());
