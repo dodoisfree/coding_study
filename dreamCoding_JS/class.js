@@ -107,3 +107,4 @@ console.log(rectangle.getArea());
 const triangle = new Triangle(20, 20, 'red');
 triangle.draw();
 console.log(triangle.getArea());
+console.log(triangle.draw);
