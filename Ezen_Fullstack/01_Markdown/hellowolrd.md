@@ -72,7 +72,7 @@ p, div { font-size: 15px; }
 
 [네이버](https://www.naver.com)로 이동하기
 
-![아이콘](배경화면.jpg)
+![아이콘](과제물%20제출%20양식.png)
 
 
 표 형상화 하기
